@@ -14,7 +14,7 @@ till en JSON-fil per dag i en iCloud Drive-mapp som synkas till din MacBook.
    med sparad anchor per typ), serialiserar till JSON och skriver/uppdaterar
    `Documents/YYYY-MM-DD.json` i appens iCloud-container.
 4. iCloud Drive synkar mappen till din Mac under
-   `~/Library/Mobile Documents/iCloud~com~example~HealthExport/Documents/`.
+   `~/Library/Mobile Documents/iCloud~se~zr45st~HealthExport/Documents/`.
 
 ## Förutsättningar
 
@@ -26,21 +26,18 @@ till en JSON-fil per dag i en iCloud Drive-mapp som synkas till din MacBook.
 
 ## Setup
 
-1. **Byt bundle-prefix.** Sök-och-ersätt `com.example` mot din
-   reverse-domän (t.ex. `se.dittnamn`) i:
-   - `project.yml`
-   - `HealthExport/HealthExport.entitlements`
-   - `HealthExport/Info.plist` (raden `iCloud.com.example.HealthExport`
-     under `NSUbiquitousContainers`)
-2. **Generera Xcode-projekt:**
+Bundle-ID är konfigurerat till `se.zr45st.HealthExport` och iCloud-containern
+till `iCloud.se.zr45st.HealthExport`.
+
+1. **Generera Xcode-projekt:**
    ```bash
    xcodegen generate
    ```
-3. **Öppna** `HealthExport.xcodeproj` i Xcode.
-4. **Signing & Capabilities** → välj ditt Team.
-5. **Anslut iPhone** och kör (▶︎). Första bygget tar ett par minuter.
-6. När appen startat på telefonen: bevilja alla hälsokategorier i dialogen.
-7. Tryck **"Exportera nu"** för en första körning.
+2. **Öppna** `HealthExport.xcodeproj` i Xcode.
+3. **Signing & Capabilities** → välj ditt Team.
+4. **Anslut iPhone** och kör (▶︎). Första bygget tar ett par minuter.
+5. När appen startat på telefonen: bevilja alla hälsokategorier i dialogen.
+6. Tryck **"Exportera nu"** för en första körning.
 
 ## Verifiering
 
@@ -48,9 +45,8 @@ till en JSON-fil per dag i en iCloud Drive-mapp som synkas till din MacBook.
   ska finnas och innehålla JSON.
 - **På Mac:**
   ```bash
-  ls -la ~/Library/Mobile\ Documents/iCloud~se~dittnamn~HealthExport/Documents/
+  ls -la ~/Library/Mobile\ Documents/iCloud~se~zr45st~HealthExport/Documents/
   ```
-  (byt `se~dittnamn` mot din reverse-domän med punkter ersatta av `~`).
 - **Daglig automatik:** Lämna iPhone i fred i ett dygn. Nästa dag ska en
   ny fil ha skapats utan att du öppnat appen.
 

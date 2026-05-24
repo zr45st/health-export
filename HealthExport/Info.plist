@@ -38,7 +38,7 @@
 
     <key>NSUbiquitousContainers</key>
     <dict>
-        <key>iCloud.com.example.HealthExport</key>
+        <key>iCloud.se.zr45st.HealthExport</key>
         <dict>
             <key>NSUbiquitousContainerIsDocumentScopePublic</key>
             <true/>

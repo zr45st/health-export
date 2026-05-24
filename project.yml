@@ -1,6 +1,6 @@
 name: HealthExport
 options:
-  bundleIdPrefix: com.example
+  bundleIdPrefix: se.zr45st
   deploymentTarget:
     iOS: "17.0"
   createIntermediateGroups: true
@@ -19,7 +19,7 @@ targets:
       - path: HealthExport
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.example.HealthExport
+        PRODUCT_BUNDLE_IDENTIFIER: se.zr45st.HealthExport
         TARGETED_DEVICE_FAMILY: "1,2"
         CODE_SIGN_ENTITLEMENTS: HealthExport/HealthExport.entitlements
         INFOPLIST_FILE: HealthExport/Info.plist
